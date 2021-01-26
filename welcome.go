@@ -1,27 +1,20 @@
 package main
-
 import (
 	"fmt"
 	"time"
 )
-
 func main() {
-
-	var ad string
-	// for english "enter your name"
-	fmt.Print("Adınızı Giriniz : ")
-	fmt.Scanln(&ad)
 	s := time.Now()
 	switch {
 	case s.Hour() < 11:
 		// for english "good morning"
-		fmt.Println("Günaydın", ad)
+		fmt.Println("Günaydın")
 	case s.Hour() < 16:
 		// for english "good afternoon"
-		fmt.Println("Tünaydın", ad)
+		fmt.Println("Tünaydın")
 	case s.Hour() > 16:
 		// for english "good evening"
-		fmt.Println("İyi Akşamlar", ad)
+		fmt.Println("İyi Akşamlar")
 	}
-
+	time.Sleep(10 * time.Second)
 }
